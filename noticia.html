@@ -3,51 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manchete Principal - Portal News</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Detalhes da Notícia - Portal Código Diário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="Logo.png" alt="Logo Portal News" width="100">
-            </a>
-            
-        </div>
-    </header>
-
-    <nav>
+    <nav id="menu">
         <ul>
-            <li><a href="index.html">⬅ Home</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="noticia.html">Notícia</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
 
-    <main>
-        <article>
-            <header class="cabecalho-noticia">
-               
-            </header>
+    <header id="header">
+        <div class="logo-text">
+            <h1>Portal Código Diário</h1>
+        </div>
+        <div class="logo-img">
+            <img src="Logo.png" alt="Logo Portal News" width="100">
+        </div>
+    </header>
 
-            <figure>
-                <img src="codigohtml.jpg" alt="Foto detalhada do acontecimento">
-                <figcaption>Código em HTML.</figcaption>
-            </figure>
+    <div class="container">
+        <main>
+            <article>
+                <header class="cabecalho-noticia">
+                    <h1>O Futuro do HTML5</h1>
+                    <p><em>Publicado em 26 de Novembro de 2025 por <strong>iMasters</strong></em></p>
+                </header>
 
-            <div class="texto-noticia">
-                <p>Existem poucas diferenças ao fazer uma comparação direta dessa edição com a documentação atual do HTML5, mas algumas novidades anunciadas e publicadas nesse draft animaram a comunidade de desenvolvimento. Importante reforçar que, como esse documento ainda é um esboço, essas novidades ainda podem sofrer alterações. Portanto é muito importante para a comunidade de desenvolvedores</p>
-                
-                <h3>Últimas Notícias</h3>
-                <h4>O mercado de tecnologia no Brasil </h4>
-                <p>O mercado de tecnologia no Brasil está em forte crescimento, projetado para crescer cerca de \(13\%\) em 2025, superando as médias dos Estados Unidos e da América Latina, segundo a IDC. Esse avanço é impulsionado pela alta demanda por infraestrutura digital, transformação digital em pequenas e médias empresas e a consolidação de ambientes híbridos (nuvem e data centers).</p>
-                
-                <img src="noticia2.jpg" alt="Detalhe específico" width="400" align="left" style="margin-right: 10px;">
-            </div>
-        </article>
-    </main>
+                <figure>
+                    <img src="codigos-html-para-paginas-web-1-1200x675.webp" alt="Monitor mostrando código HTML colorido" width="100%">
+                    <figcaption>Exemplo de código HTML.</figcaption>
+                </figure>
+
+                <div class="texto-noticia">
+                    <p>O HTML5 continua evoluindo. Segundo a <a href="https://www.w3.org/" target="_blank">W3C</a>, novas especificações estão sendo desenhadas.</p>
+                     <h3>O futuro do HTML</h3>
+                    <p>Nessa versão, novos elementos continuam sendo adicionados baseados em pesquisas sobre as práticas de criação predominantes. Uma atenção especial continua a ser dada à definição de critérios de conformidade claros para os agentes do usuário, em um esforço para melhorar a interoperabilidade e garantir a evolução da Web. Em abril de 2013, o HTML5.1 estava em “W3C Editor’s Draft”, ou seja, ainda é um documento que vai passar por revisões.</p>
+
+                    <h3>Principais Mudanças</h3>
+                    <p>Existem poucas diferenças ao fazer uma comparação direta dessa edição com a documentação atual do HTML5, mas algumas novidades anunciadas e publicadas nesse draft animaram a comunidade de desenvolvimento. Importante reforçar que, como esse documento ainda é um esboço, essas novidades ainda podem sofrer alterações.</p>
+                    
+                    <h3>O mercado de Tecnologia no Brasil</h3>
+                    <img src="noticia2.jpg" alt="Gráfico de crescimento" width="300" class="img-float-left">
+                    
+                    <p>Tem crescido significativamente, com previsões de alta para os próximos anos...</p>
+                    <br style="clear:both"> <h3>Glossário</h3>
+                    <dl>
+                        <dt>API</dt>
+                        <dd>Interface de Programação de Aplicações.</dd>
+                        <dt>DOM</dt>
+                        <dd>Modelo de Objeto de Documento.</dd>
+                        <dt>SEO</dt>
+                        <dd>Otimização para Motores de Busca.</dd>
+                    </dl>
+
+                    <h3>Comparativo de Versões</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recurso</th>
+                                <th>HTML 4</th>
+                                <th>HTML 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Áudio/Vídeo</td>
+                                <td>Plugin Flash</td>
+                                <td>Nativo</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Semântica</td> <td>Limitada (divs)</td>
+                                <td>Avançada (article, nav)</td>
+                            </tr>
+                            <tr>
+                                <td>Não padronizada</td>
+                                <td>Padronizada</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align:center">Fonte: W3Schools</td> </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="downloads">
+                        <h3>Arquivos para Estudo</h3>
+                        <ul>
+                            <li><a href="arquivo.pdf" download>📥 Baixar Artigo Completo (PDF)</a></li>
+                            <li><a href="codigo.zip" download>📥 Baixar Código Fonte</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Portal News</p>
+        <p>&copy; 2024 Portal Código Diário</p>
     </footer>
 
 </body>
