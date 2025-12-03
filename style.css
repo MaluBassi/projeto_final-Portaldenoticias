@@ -5,8 +5,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 :root {
-    --cor-primaria: #4dd0e1; /* Azul claro do cabeçalho */
-    --cor-secundaria: #0392a5; /* Azul mais escuro do menu */
+    --cor-primaria: #4dd0e1; 
+    --cor-secundaria: #0392a5; 
     --cor-texto: #333;
     --cor-fundo: #e0f7fa;
     --cor-branco: #ffffff;
@@ -19,7 +19,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
-    font-family: 'Georgia', serif; /* Fonte serifada  */
+    font-family: 'Georgia', serif; 
 }
 p {
     line-height: 1.6;
@@ -34,12 +34,12 @@ a:visited { color: #551a8b; }
 a:hover { color: var(--cor-hover); text-decoration: underline; }
 a:active { color: red; }
 header {
-    background-color: var(--cor-primaria);
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 5px solid var(--cor-secundaria);
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 header .logo-text h1 {
     font-size: 2.5em;
@@ -58,14 +58,21 @@ nav ul {
     list-style: none; 
     display: flex;
     justify-content: center;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 nav ul li {
     margin: 0 15px;
+    display: inline-block;
+    position: relative;
 }
 nav ul li a {
     display: block;
     padding: 15px 20px;
-    color: var(--cor-branco);
+    color: white;
+    text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -104,9 +111,10 @@ aside {
     gap: 20px;
 }
 .card {
-    background: var(--cor-branco);
+    background-color: white;
     border-radius: 8px;
     padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: relative; 
 }
@@ -116,6 +124,7 @@ aside {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
+
 }
 .badge {
     position: absolute;
@@ -187,4 +196,145 @@ footer {
     padding: 20px;
     margin-top: 40px;
     clear: both;
+}
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2); 
+}
+.btn:hover, button:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.05); 
+    opacity: 0.9;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid var(--cor-secundaria);
+    background-color: #86b8cb;
+    box-shadow: 0 0 5px rgba(23, 160, 178, 0.5);
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table tr:hover {
+    background-color: #d1f7ff; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+main {
+    animation: fadeIn 10s ease-out;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cor-secundaria);
+    min-width: 150px;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.submenu li {
+    display: block; 
+}
+.dropdown:hover .submenu {
+    display: block;
+    animation: fadeIn 0.3s; 
+}
+/* Aqui está a parte comentata para celular, quando for utilizar em celular ou programar o site para celular, descomentar */
+/* @media (max-width: 768px) {
+    nav ul li {
+        display: block; 
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .submenu {
+        position: relative; 
+    }
+    
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+} */
+
+/* SUBMENU DROPDOWN */
+.page-nav ul li {
+    position: relative; /* necessário para o submenu se posicionar */
+}
+
+.page-nav ul li .submenu {
+    display: none; /* escondido por padrão */
+    position: absolute;
+    top: 100%; /* aparece logo abaixo do item principal */
+    left: 0;
+    background-color: var(--azul-escuro);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-nav ul li:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-nav ul li .submenu li {
+    padding: 8px 20px;
+}
+
+.page-nav ul li .submenu li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.page-nav ul li .submenu li a:hover {
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+    border-radius: 5px;
+}
+
+/* RESPONSIVO: submenu adaptando em telas pequenas */
+@media (max-width: 768px) {
+    .page-nav ul li .submenu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        display: none; /* ainda escondido */
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .page-nav ul li:hover .submenu {
+        display: block;
+    }
+
+    .page-nav ul li .submenu li {
+        padding: 10px 0;
+    }
+}
+.imagem-responsiva {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
 }

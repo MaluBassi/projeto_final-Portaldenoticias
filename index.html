@@ -9,14 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="noticia.html">Notícia</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+<nav class="page-nav">
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li>
+      <a href="#">Notícias</a>
+      <ul class="submenu">
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Tecnologia</a></li>
+        <li><a href="#">Esportes</a></li>
+      </ul>
+    </li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
 
     <header id="header">
         <div class="logo-text">
@@ -29,17 +35,17 @@
 
     <div class="container">
         <main>
-            <section id="destaques">
+              <h1>Destaques</h1>
                 <article>
                     <span class="badge">MANCHETE</span>
                     <figure>
-                        <img src="Noticia1.webp" alt="Ilustração sobre o futuro do HTML5" width="100%">
+                        <img src="Noticia1.webp" alt="Ilustração sobre o futuro do HTML5" class="imagem-responsiva">
                     </figure>
                     <h2>O Futuro do HTML5</h2>
                     <p>A evolução contínua do padrão HTML5. Com novas funcionalidades e APIs sendo adicionadas para se adaptar às mudanças da web, como a realidade aumentada, inteligência artificial e Internet das Coisas (IoT)...</p>
                     <a href="noticia.html" class="btn">Ler notícia completa</a>
                 </article>
-            </section>
+        
      
             <section id="feed-noticias">
                 
