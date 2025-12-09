@@ -249,7 +249,7 @@ main {
     animation: fadeIn 0.3s; 
 }
 /* Aqui está a parte comentata para celular, quando for utilizar em celular ou programar o site para celular, descomentar */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     nav ul li {
         display: block; 
         border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -267,7 +267,7 @@ main {
     .container {
         padding: 10px;
     }
-} */
+}
 
 /* SUBMENU DROPDOWN */
 .page-nav ul li {
